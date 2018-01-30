@@ -1,0 +1,42 @@
+[
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    },
+    {
+        "chanel": "taskManager",
+        "body": "test message <a href=\"/tasks/id/1\">task 1</a>",
+        "date": "2017-07-24T16:13:24"
+    }
+]

@@ -1,0 +1,171 @@
+<style>
+    .notify-main-button .badge.up {
+        position: relative;
+        top: -20px;
+        padding: 3px 6px;
+        margin-left: -15px;
+    }
+    .notify-main-button .bg-danger {
+        color: #fff;
+        background-color: #f05050;
+    }
+    .notify-main-button .badge-sm {
+        padding: 2px 5px!important;
+        font-size: 85%;
+    }
+    .notify-main-button .glyphicon-bell{
+        font-size: 24px;
+        color:#000;
+    }
+    .w-xl {
+        width: 320px;
+    }
+    .notify-main-button .list-group{
+        max-height: 400px;
+        height: 400px;
+        overflow-y: auto;
+    }
+    .notify-main-button .panel{
+        margin-bottom: 0;
+    }
+    .notify-main-button .list-group {
+        margin-bottom: 0;
+    }
+    .notify-main-button .list-group-item {
+        position: relative;
+    }
+    .notify-main-button .list-group-item:focus {
+        background-color: inherit;
+    }
+    .notify-main-button .list-group-item.new,
+    .notify-main-button .list-group-item.new:focus{
+        background-color: #f7f7f7;
+    }
+    .notify-main-button .list-group-item:hover .mark-as-read-btn .mark-as-read-btn-ico {
+        opacity: 1;
+    }
+    .notify-main-button .notify-checkbox {
+        margin-right: 5px;
+    }
+    .notify-main-button .mark-as-read-btn {
+        position:  absolute;
+        padding: 6px;
+        top: 10px;
+        right: 10px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: block;
+        cursor: pointer;
+    }
+    .notify-main-button .mark-as-read-btn-ico {
+        width: 10px;
+        height: 10px;
+        background-color: #dddddd;
+        opacity: 0;
+        border-radius: 50%;
+        display: block;
+    }
+    .notify-main-button .mark-as-read-btn:hover .mark-as-read-btn-ico{
+        background-color: #3c3c3c;
+    }
+    .notify-main-button .notify-control-panel {
+        padding: 0 15px 5px 15px;
+    }
+    .notify-main-button .notify-control-panel .control-btn {
+        margin-left: 10px;
+    }
+    .notify-main-button .notify-control-panel .control-btn:hover {
+        cursor: pointer;
+    }
+    .notify-main-button .list-group-block .block-body{
+        padding-left: 20px
+    }
+    .notify-main-button .list-group-block .block-head{
+        padding: 5px
+    }
+    .inline-block{
+        display: inline-block;
+    }
+    .dropdown-submenu {
+        position: relative;
+    }
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: -120px;
+        margin-top: 30px
+    }
+    .notify-main-button .error.alert{
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    .notify-main-button .error.alert.alert-dismissible .close{
+        right: -5px;
+    }
+</style>
+
+<ul class="nav navbar-nav notify-main-button">
+    <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">
+            <span class="glyphicon glyphicon-bell"></span>
+            <span class="badge badge-sm up bg-danger pull-right-xs"></span>
+        </a>
+        <div class="dropdown-menu w-xl animated fadeInUp dropdown-menu-right">
+            <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                    <strong class="badge-message"></strong>
+                </div>
+                <div class="notify-control-panel">
+                    <label>
+                        <input type="checkbox" class="select-all-btn" />
+                        <small> выбрать все</small>
+                    </label>
+                    <div class="pull-right">
+                        <a class="control-btn refresh-btn">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                        </a>
+                        <div class="dropdown dropdown-submenu inline-block">
+                            <a class="control-btn settings-btn dropdown-submenu-toggle">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-submenu-toggle" href="#">Групировать</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">
+                                                <label><input type="checkbox" name="group" value="Type" /> По типу</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <label><input type="checkbox" name="group" value="Channel" /> По отправителю</label>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <label><input type="checkbox" name="group" value="CreatedDate" /> По дате</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="notify-list"></div>
+                <div class="panel-footer text-sm">
+                    <a href="" class="pull-right"><i class="fa fa-cog"></i></a>
+                    <a href="" class="mark-as-read-selected-btn">Отметить выбранные как прочитаное</a>
+
+                    <div class="error alert alert-danger alert-dismissible hidden" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <span class="error-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

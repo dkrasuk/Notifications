@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notifications.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Notifications.WebAPI.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Notifications.WebAPI.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Notifications.WebAPI.WebApiConfig.RegisterDependencyResolver(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the dependency resolver.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:Notifications.WebAPI.Bootstraper">
+            <summary>
+            Class Bootstraper.
+            </summary>
+        </member>
+        <member name="M:Notifications.WebAPI.Bootstraper.Register(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Registers the specified container.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="T:Notifications.WebAPI.Controllers.NotificationController">
+            <summary>
+            Class TaskController.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.#ctor(AlfaBank.Logger.ILogger,Notifications.DataAccess.Interfaces.INotificationData,Notifications.BusinessLayer.Services.Interfaces.ISmtpService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Notifications.WebAPI.Controllers.NotificationController"/> class.
+            </summary>
+            <param name="logger">The logger service.</param>
+            <param name="notificationDataService">The notification data service.</param>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.CreateNotification(Notifications.DataAccess.DTO.NotificationDTO)">
+            <summary>
+            Create the notification.
+            </summary>
+            <param name="notification">Notification.</param>
+            <returns>long?</returns>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.CreateNotifications(Notifications.DataAccess.DTO.NotificationDTO)">
+            <summary>
+            Create the notifications with Email.
+            </summary>
+            <param name="notify">Notification.</param>
+            <returns>long?</returns>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.GetNotifications(System.Boolean)">
+            <summary>
+            Get notifications by user login.
+            </summary>
+            <param name="onlyUnreaded">Take only unreaded notifications.</param>
+            <returns>IEnumerable&lt;NotificationDTO&gt;</returns>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.GetCountOfUnreadedNotifications">
+            <summary>
+            Get the count of unreaded notifications by user login.
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.SetNotificationAsReaded(System.Int32)">
+            <summary>
+            Set notification as Readed.
+            </summary>
+            <param name="notificationId">The notification Id.</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:Notifications.WebAPI.Controllers.NotificationController.SetNotificationListAsReaded(System.Int32[])">
+            <summary>
+            Set notification list as Readed.
+            </summary>
+            <param name="notificationId">The notification Id.</param>
+            <returns>void</returns>
+        </member>
+        <member name="T:Notifications.WebAPI.Models.Binders.ArrayModelBinder">
+            <summary>
+            Model binder for array in url
+            </summary>
+        </member>
+        <member name="T:Notifications.WebAPI.SignalR.NotificationsHub">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Notifications.WebAPI.SignalR.NotificationsHub.SendNotification(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="userLogin"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Notifications.WebAPI.SignalR.NotificationsHub.SetNotificationAsReaded(System.String,System.Object)">
+            <summary>
+            Set notification as readed
+            </summary>
+            <param name="userLogin"></param>
+            <param name="notificationId"></param>
+        </member>
+        <member name="M:Notifications.WebAPI.SignalR.NotificationsHub.Register">
+            <summary>
+            Register user
+            </summary>
+        </member>
+    </members>
+</doc>
